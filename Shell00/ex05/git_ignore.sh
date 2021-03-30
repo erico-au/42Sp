@@ -1,3 +1,3 @@
 #!/bin/sh
-git status --ignored -s | cut -c 4-
+git status --ignored --untracked-files=all -s | cut -c 4-
 
