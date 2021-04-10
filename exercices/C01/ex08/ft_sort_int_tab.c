@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eaugusto <eaugusto@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/09 11:34:23 by eaugusto          #+#    #+#             */
-/*   Updated: 2021/04/09 22:46:33 by eaugusto         ###   ########.fr       */
+/*   Created: 2021/04/09 23:53:13 by eaugusto          #+#    #+#             */
+/*   Updated: 2021/04/10 17:50:27 by eaugusto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistr.h>
-
-int		ft_strlen(char *str)
+void	ft_swap(int *a, int *b)
 {
-	int i;
+	int e;
 
-	i = 0;
-	while (*str != '\0')
+	e = *a;
+	*a = *b;
+	*b = e;
+}
+
+void  ft_sort_int_tab(int *tab, int size)
+{
+	int x;
+	int y;
+
+	x = -1;
+	while (x++ < size)
 	{
-		*str++;
-		i++;
+		y = - 1;
+		while (++y < size - x - 1)
+		{
+			if (tab[y] > tab[y + 1])
+				ft_swap(&tab[y], &tab[y + 1]);
+		}
 	}
-	return (i);
 }

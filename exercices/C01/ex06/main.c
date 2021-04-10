@@ -6,16 +6,16 @@
 /*   By: eaugusto <eaugusto@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 11:34:42 by eaugusto          #+#    #+#             */
-/*   Updated: 2021/04/09 12:50:02 by eaugusto         ###   ########.fr       */
+/*   Updated: 2021/04/09 22:49:47 by eaugusto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str);
+#include <stdio.h>
+
+int		ft_strlen(char *str);
 
 int		main(void)
 {
-	char str[];
-
-	str = "erico";
-	ft_strlen(&str);
+	char str[] = {"erico"};
+	printf("%d", ft_strlen(str));
 }

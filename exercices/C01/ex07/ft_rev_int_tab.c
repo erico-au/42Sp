@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eaugusto <eaugusto@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/09 11:34:23 by eaugusto          #+#    #+#             */
-/*   Updated: 2021/04/09 22:46:33 by eaugusto         ###   ########.fr       */
+/*   Created: 2021/04/09 22:51:20 by eaugusto          #+#    #+#             */
+/*   Updated: 2021/04/10 15:06:46 by eaugusto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistr.h>
-
-int		ft_strlen(char *str)
+void ft_rev_int_tab(int *tab, int size)
 {
-	int i;
+	int x;
+	int j;
 
-	i = 0;
-	while (*str != '\0')
+	j = 0;
+	size = size  - 1;
+	while (j <= size)
 	{
-		*str++;
-		i++;
+		x = tab[j];
+		tab[j] = tab[size];
+		tab[size] = x;
+		j++;
+		size--;
 	}
-	return (i);
 }
