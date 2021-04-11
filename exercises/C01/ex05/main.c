@@ -6,7 +6,7 @@
 /*   By: eaugusto <eaugusto@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/08 18:34:11 by eaugusto          #+#    #+#             */
-/*   Updated: 2021/04/09 22:43:42 by eaugusto         ###   ########.fr       */
+/*   Updated: 2021/04/11 15:15:01 by eaugusto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@ void	ft_putstr(char *str);
 
 int		main(void)
 {
-	char c[] = { erico };
+	char c[] = { "basecamp" };
 
 	ft_putstr(c);
 }
