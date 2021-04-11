@@ -6,11 +6,9 @@
 /*   By: eaugusto <eaugusto@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 11:34:23 by eaugusto          #+#    #+#             */
-/*   Updated: 2021/04/09 22:46:33 by eaugusto         ###   ########.fr       */
+/*   Updated: 2021/04/11 14:26:51 by eaugusto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistr.h>
 
 int		ft_strlen(char *str)
 {
@@ -19,7 +17,7 @@ int		ft_strlen(char *str)
 	i = 0;
 	while (*str != '\0')
 	{
-		*str++;
+		str++;
 		i++;
 	}
 	return (i);
