@@ -6,7 +6,7 @@
 /*   By: eaugusto <eaugusto@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 23:08:50 by eaugusto          #+#    #+#             */
-/*   Updated: 2021/04/13 20:13:07 by eaugusto         ###   ########.fr       */
+/*   Updated: 2021/04/13 20:43:56 by eaugusto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,58 @@ char	*ft_strcapitalize(char *str)
 		y++;
 	}
 	return (0);
+}
+
+//-------------ok-------------------------------------------------
+
+int		is_alphanumerical(char str)
+{
+	if (((str >= 65 && str <= 90) || (str >= 97 && str <= 122))
+	|| (str >= 48 && str <= 57))
+	{
+		return (1);
+	}
+	else
+		return (0);
+}
+
+int		is_lowercase(char str)
+{
+	if (str >= 97 && str <= 122)
+		return (1);
+	else
+		return (0);
+}
+
+int		is_uppercase(char str)
+{
+	if (str >= 65 && str <= 90)
+		return (1);
+	else
+		return (0);
+}
+
+char	*ft_strcapitalize(char *str)
+{
+	int cont;
+
+	cont = 0;
+	while (str[cont] != '\0')
+	{
+		if (is_alphanumerical(str[cont - 1]) == 1)
+		{
+			if (is_uppercase(str[cont]) == 1)
+				str[cont] += 32;
+		}
+		else if ((is_alphanumerical(str[cont - 1]) == 0
+		&& is_alphanumerical(str[cont + 1]) == 0)
+		|| (is_alphanumerical(str[cont - 1]) == 0
+		&& is_alphanumerical(str[cont + 1]) == 1))
+		{
+			if (is_lowercase(str[cont]) == 1)
+				str[cont] -= 32;
+		}
+		cont++;
+	}
+	return (str);
 }
