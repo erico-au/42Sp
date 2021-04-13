@@ -6,11 +6,24 @@
 /*   By: eaugusto <eaugusto@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 10:52:21 by eaugusto          #+#    #+#             */
-/*   Updated: 2021/04/13 20:32:36 by eaugusto         ###   ########.fr       */
+/*   Updated: 2021/04/13 21:42:58 by eaugusto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_strcmp(char *s1, char *s2)
 {
-	
+	int x;
+
+	x = 0;
+	while (s1[x])
+	{
+		if (s1[x] != s2[x])
+			return (*s1 - *s2);
+		s1++;
+		s2++;
+	}
+	if (s1 == s2)
+		return (0);
+	else
+		return (-*s2);
 }
