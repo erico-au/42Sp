@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eaugusto <eaugusto@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/13 10:52:21 by eaugusto          #+#    #+#             */
-/*   Updated: 2021/04/14 00:11:31 by eaugusto         ###   ########.fr       */
+/*   Created: 2021/04/14 00:38:57 by eaugusto          #+#    #+#             */
+/*   Updated: 2021/04/14 01:17:02 by eaugusto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(char *s1, char *s2)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int x;
+	int				x;
+	unsigned int	y;
 
 	x = 0;
-	while (s1[x])
+	y = 0;
+	while (dest[x])
+		x++;
+	while (src[y] && y < nb)
 	{
-		if (s1[x] != s2[x])
-			return (*s1 - *s2);
-		s1++;
-		s2++;
+		dest[x] = src[y];
+		x++;
+		y++;
 	}
-	if (s1 == s2)
-		return (0);
-	else
-		return (*s2);
+	dest[x] = '\0';
+	return (dest);
 }

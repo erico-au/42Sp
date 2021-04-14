@@ -6,7 +6,7 @@
 /*   By: eaugusto <eaugusto@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/04 15:21:57 by vgoncalv          #+#    #+#             */
-/*   Updated: 2021/04/13 22:07:27 by eaugusto         ###   ########.fr       */
+/*   Updated: 2021/04/14 00:11:04 by eaugusto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	main(void)
 
 	s1 = calloc(10, sizeof(char));
 	s2 = calloc(10, sizeof(char));
-	s1 = "abcdEfghi";
+	s1 = "abcdefGhi";
 	s2 = "abcdefghi";
 	printf("s1: %s, s2: %s\n", s1, s2);
 	printf("n = 6; ft_cmp: %d, og_cmp: %d\n", ft_strncmp(s1, s2, 6), strncmp(s1, s2, 6));
