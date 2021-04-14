@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eaugusto <eaugusto@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/13 21:45:25 by eaugusto          #+#    #+#             */
-/*   Updated: 2021/04/14 18:06:02 by eaugusto         ###   ########.fr       */
+/*   Created: 2021/04/14 20:44:41 by eaugusto          #+#    #+#             */
+/*   Updated: 2021/04/14 23:03:56 by eaugusto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_atoi(char *str)
 {
-	if (n == 0)
-		return (0);
-	while ((*s1 == *s2) && (*s1 != '\0') && (*s2 != '\0') && (n > 1))
+	
+
+	while (str[x] != '\0')
 	{
-		s1++;
-		s2++;
-		n--;
+
 	}
-	return (((unsigned char)*s1) - ((unsigned char)*s2));
 }

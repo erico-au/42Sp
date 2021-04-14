@@ -6,22 +6,27 @@
 /*   By: eaugusto <eaugusto@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 00:21:06 by eaugusto          #+#    #+#             */
-/*   Updated: 2021/04/14 00:28:42 by eaugusto         ###   ########.fr       */
+/*   Updated: 2021/04/14 17:47:40 by eaugusto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strcat(char *dest, char *src)
 {
 	int x;
+	int y;
 
 	x = 0;
-	while (*dest)
+	y = 0;
+	while (dest[x] != '\0')
 	{
 		x++;
 	}
-	while (*src)
+	while (src[y] != '\0')
 	{
-		*dest = dest[x] + *src;
+		dest[x] = src[y];
+		x++;
+		y++;
 	}
+	dest[x] = '\0';
 	return (dest);
 }
