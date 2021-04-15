@@ -6,11 +6,33 @@
 /*   By: eaugusto <eaugusto@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 17:29:29 by eaugusto          #+#    #+#             */
-/*   Updated: 2021/04/14 20:43:24 by eaugusto         ###   ########.fr       */
+/*   Updated: 2021/04/15 11:31:35 by eaugusto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <unistd.h>
+
+void	ft_putnbr(int nb);
+
+int	main(void)
+{
+	write(1, "-1: ", 4);
+	ft_putnbr(-1);
+	write(1, "\n1: ", 4);
+	ft_putnbr(1);
+	write(1, "\n-10: ", 6);
+	ft_putnbr(-10);
+	write(1, "\n10: ", 5);
+	ft_putnbr(10);
+	write(1, "\nINT_MAX: ", 10);
+	ft_putnbr(333);
+	write(1, "\nINT_MIN: ", 10);
+	ft_putnbr(33333);
+	write(1, "\n", 1);
+	return (0);
+}
+
 
 void	ft_putnbr(int nb)
 {

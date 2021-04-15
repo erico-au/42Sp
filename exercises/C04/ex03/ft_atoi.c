@@ -6,16 +6,29 @@
 /*   By: eaugusto <eaugusto@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 20:44:41 by eaugusto          #+#    #+#             */
-/*   Updated: 2021/04/14 23:03:56 by eaugusto         ###   ########.fr       */
+/*   Updated: 2021/04/15 01:51:21 by eaugusto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atoi(char *str)
 {
-	
+	int x;
+	int y;
+	int z;
 
-	while (str[x] != '\0')
+	x = 0;
+	y = 0;
+	z = 0;
+	while ((str[x] >= 9 && str[x] <= 13) || str[x] == ' ')
+		x++;
+	while (str[x] == '-' || str[x] == '+')
 	{
-
+		if (str[x++] == '-')
+			z++;
 	}
+	while (str[x] >= '0' && str[x] <= '9')
+		y = y * 10 + (str[x++] - '0');
+	if (z % 2 == 1)
+		return (y * -1);
+	return (y);
 }
