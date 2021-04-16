@@ -6,7 +6,7 @@
 /*   By: eaugusto <eaugusto@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/16 01:09:10 by eaugusto          #+#    #+#             */
-/*   Updated: 2021/04/16 01:17:25 by eaugusto         ###   ########.fr       */
+/*   Updated: 2021/04/16 01:23:37 by eaugusto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int ft_find_next_prime(int nb)
 	}
 	return (nb);
 }
+
 
 #include <stdio.h>
 
